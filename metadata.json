@@ -1,0 +1,6 @@
+{
+  "name": "SignalStack GTM",
+  "description": "Interactive GTM AI workflow workbench for ICP discovery, lead qualification, buying-signal tracking, company research, personalized outreach sequences, and CRM integration placeholders.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

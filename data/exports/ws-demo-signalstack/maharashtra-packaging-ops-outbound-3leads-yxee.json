@@ -1,0 +1,260 @@
+{
+  "exportId": "exp-1795088670982-yxee",
+  "campaign": "Maharashtra Packaging Ops Outbound",
+  "exportedAt": "2026-11-19T11:44:30.982Z",
+  "rowCount": 3,
+  "filters": {
+    "product": "LinePulse IIoT Plant Automation",
+    "campaignGoal": "Book plant efficiency & line-uptime demos with operations leaders",
+    "icpName": "Packaging Manufacturers (Maharashtra)",
+    "industry": "Packaging Manufacturing",
+    "companyHqLocation": "Maharashtra",
+    "contactLocation": "",
+    "minEmployees": 50,
+    "maxEmployees": 500,
+    "buyerRoles": [
+      "Head of Operations",
+      "VP Operations",
+      "Plant Operations Director"
+    ],
+    "exclusions": [
+      "Existing HubSpot customers"
+    ],
+    "buyingSignalKeywords": [
+      "production",
+      "hiring"
+    ],
+    "signalWindowDays": 90,
+    "targetCount": 25,
+    "requestedOutput": null,
+    "verifiedEmailOnly": false,
+    "excludeHubSpotCustomers": true,
+    "cityFilter": null
+  },
+  "citySummary": [
+    {
+      "City": "Pune",
+      "LeadCount": 3,
+      "QualifiedCount": 3,
+      "CrmSyncedCount": 0,
+      "AssignedOwners": "Rohan Kulkarni"
+    }
+  ],
+  "leads": [
+    {
+      "lead_id": "lead-mh-01",
+      "companyName": "Sahyadri FlexiPack Pvt Ltd",
+      "contactName": "Ananya Deshmukh",
+      "contactTitle": "Head of Operations",
+      "companyHqCity": "Pune",
+      "companyHqState": "Maharashtra",
+      "employeeCount": 280,
+      "workEmail": "ananya.deshmukh@sahyadriflexipack.example",
+      "emailStatus": "valid",
+      "emailProvider": "Hunter",
+      "scoreTotal": 94,
+      "qualificationLabel": "Qualified",
+      "strongestSignal": "Hiring 3 Production Shift Supervisors & Extrusion Line Engineers (Chakan Plant)",
+      "signalSource": "Sahyadri Careers Feed",
+      "signalDate": "2026-11-06",
+      "owner": "Rohan Kulkarni",
+      "crmStage": "New",
+      "acquisitionSource": "Apollo Company + People Search",
+      "signals": [
+        {
+          "id": "sig-lead-mh-01-1",
+          "type": "Hiring",
+          "title": "Hiring 3 Production Shift Supervisors & Extrusion Line Engineers (Chakan Plant)",
+          "summary": "Posted 12 days ago for 24x7 multi-layer film extrusion expansion at Chakan MIDC Phase II.",
+          "sourceName": "Sahyadri Careers Feed",
+          "sourceUrlOrId": "https://sahyadriflexipack.example/careers/production-shift-supervisor-2026",
+          "eventDate": "2026-11-06",
+          "observedAt": "2026-11-18T08:15:00Z"
+        },
+        {
+          "id": "sig-lead-mh-01-2",
+          "type": "Expansion",
+          "title": "Commissioned 8-color rotogravure press line at Chakan facility",
+          "summary": "Added 400 MT/month flexible laminate capacity serving FMCG snack brands.",
+          "sourceName": "Sahyadri Press Room",
+          "sourceUrlOrId": "https://sahyadriflexipack.example/news/chakan-rotogravure-2026",
+          "eventDate": "2026-10-14",
+          "observedAt": "2026-11-18T08:15:00Z"
+        }
+      ],
+      "scoreBreakdown": {
+        "companyFit": 40,
+        "roleFit": 25,
+        "buyingSignals": 23,
+        "engagement": 6,
+        "total": 94,
+        "factors": [
+          {
+            "factor": "Company Fit",
+            "points": 40,
+            "maxPoints": 40,
+            "reason": "Industry matches Packaging Manufacturing · HQ in Pune, Maharashtra · 280 employees (within 50–500)"
+          },
+          {
+            "factor": "Buyer-Role Fit",
+            "points": 25,
+            "maxPoints": 25,
+            "reason": "Exact role match: Head of Operations"
+          },
+          {
+            "factor": "Recent Buying Signals",
+            "points": 23,
+            "maxPoints": 25,
+            "reason": "Matching hiring signal on 2026-11-06 (12d ago): Hiring 3 Production Shift Supervisors & Extrusion Line Engineers (Chakan Plant)"
+          },
+          {
+            "factor": "Observed Engagement",
+            "points": 6,
+            "maxPoints": 10,
+            "reason": "Verified direct contact with multi-source footprint"
+          }
+        ]
+      }
+    },
+    {
+      "lead_id": "lead-mh-02",
+      "companyName": "Deccan Corrugated Systems",
+      "contactName": "Vikramaditya Joshi",
+      "contactTitle": "Head of Operations",
+      "companyHqCity": "Pune",
+      "companyHqState": "Maharashtra",
+      "employeeCount": 310,
+      "workEmail": "v.joshi@deccancorrugated.example",
+      "emailStatus": "valid",
+      "emailProvider": "Hunter",
+      "scoreTotal": 94,
+      "qualificationLabel": "Qualified",
+      "strongestSignal": "Production Manager & Automated Corrugator Operator hiring notice",
+      "signalSource": "Deccan Careers Portal",
+      "signalDate": "2026-10-29",
+      "owner": "Rohan Kulkarni",
+      "crmStage": "New",
+      "acquisitionSource": "Apollo Company + People Search",
+      "signals": [
+        {
+          "id": "sig-lead-mh-02-1",
+          "type": "Hiring",
+          "title": "Production Manager & Automated Corrugator Operator hiring notice",
+          "summary": "Recruiting production leadership for newly upgraded 5-ply automatic board line in Pimpri-Chinchwad.",
+          "sourceName": "Deccan Careers Portal",
+          "sourceUrlOrId": "https://deccancorrugated.example/careers/production-manager-pune",
+          "eventDate": "2026-10-29",
+          "observedAt": "2026-11-18T08:15:00Z"
+        },
+        {
+          "id": "sig-lead-mh-02-2",
+          "type": "Expansion",
+          "title": "Signed regional e-commerce carton supply agreement across West India",
+          "summary": "Expanded monthly shipper box output by 35% for Q4 festive peak.",
+          "sourceName": "Deccan News Feed",
+          "sourceUrlOrId": "https://deccancorrugated.example/news/west-india-cartons",
+          "eventDate": "2026-09-25",
+          "observedAt": "2026-11-18T08:15:00Z"
+        }
+      ],
+      "scoreBreakdown": {
+        "companyFit": 40,
+        "roleFit": 25,
+        "buyingSignals": 23,
+        "engagement": 6,
+        "total": 94,
+        "factors": [
+          {
+            "factor": "Company Fit",
+            "points": 40,
+            "maxPoints": 40,
+            "reason": "Industry matches Packaging Manufacturing · HQ in Pune, Maharashtra · 310 employees (within 50–500)"
+          },
+          {
+            "factor": "Buyer-Role Fit",
+            "points": 25,
+            "maxPoints": 25,
+            "reason": "Exact role match: Head of Operations"
+          },
+          {
+            "factor": "Recent Buying Signals",
+            "points": 23,
+            "maxPoints": 25,
+            "reason": "Matching hiring signal on 2026-10-29 (20d ago): Production Manager & Automated Corrugator Operator hiring notice"
+          },
+          {
+            "factor": "Observed Engagement",
+            "points": 6,
+            "maxPoints": 10,
+            "reason": "Verified direct contact with multi-source footprint"
+          }
+        ]
+      }
+    },
+    {
+      "lead_id": "lead-mh-03",
+      "companyName": "Indrayani Barrier Packaging",
+      "contactName": "Priyanka Kulkarni",
+      "contactTitle": "Head of Operations",
+      "companyHqCity": "Pune",
+      "companyHqState": "Maharashtra",
+      "employeeCount": 245,
+      "workEmail": "priyanka.k@indrayanibarrier.example",
+      "emailStatus": "valid",
+      "emailProvider": "Hunter",
+      "scoreTotal": 92,
+      "qualificationLabel": "Qualified",
+      "strongestSignal": "Cleanroom Production Lead & Blister Foil Production hiring notice",
+      "signalSource": "Indrayani Careers Page",
+      "signalDate": "2026-11-02",
+      "owner": "Rohan Kulkarni",
+      "crmStage": "New",
+      "acquisitionSource": "Apollo Company + People Search",
+      "signals": [
+        {
+          "id": "sig-lead-mh-03-1",
+          "type": "Hiring",
+          "title": "Cleanroom Production Lead & Blister Foil Production hiring notice",
+          "summary": "Hiring cleanroom production engineers at Talegaon MIDC to support pharma blister foil lines.",
+          "sourceName": "Indrayani Careers Page",
+          "sourceUrlOrId": "https://indrayanibarrier.example/careers/cleanroom-production-lead",
+          "eventDate": "2026-11-02",
+          "observedAt": "2026-11-18T08:15:00Z"
+        }
+      ],
+      "scoreBreakdown": {
+        "companyFit": 40,
+        "roleFit": 25,
+        "buyingSignals": 23,
+        "engagement": 4,
+        "total": 92,
+        "factors": [
+          {
+            "factor": "Company Fit",
+            "points": 40,
+            "maxPoints": 40,
+            "reason": "Industry matches Packaging Manufacturing · HQ in Pune, Maharashtra · 245 employees (within 50–500)"
+          },
+          {
+            "factor": "Buyer-Role Fit",
+            "points": 25,
+            "maxPoints": 25,
+            "reason": "Exact role match: Head of Operations"
+          },
+          {
+            "factor": "Recent Buying Signals",
+            "points": 23,
+            "maxPoints": 25,
+            "reason": "Matching hiring signal on 2026-11-02 (16d ago): Cleanroom Production Lead & Blister Foil Production hiring notice"
+          },
+          {
+            "factor": "Observed Engagement",
+            "points": 4,
+            "maxPoints": 10,
+            "reason": "Verified work email ready for engagement"
+          }
+        ]
+      }
+    }
+  ]
+}

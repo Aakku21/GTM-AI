@@ -1,0 +1,1640 @@
+{
+  "workspaces": [
+    {
+      "id": "ws-demo-signalstack",
+      "name": "Demo Workspace (Fictional Data)",
+      "mode": "demo",
+      "currency": "INR",
+      "timeZone": "Asia/Kolkata",
+      "creditBudget": 2500,
+      "creditsUsed": 140,
+      "retentionDays": 365,
+      "aiProvider": "gemini",
+      "aiModel": "gemini-4-hydrogen",
+      "products": [
+        {
+          "id": "prod-linepulse",
+          "name": "LinePulse IIoT Plant Automation",
+          "summary": "Real-time OEE monitoring and predictive downtime alerts for packaging plants.",
+          "valueProp": "Cuts unplanned corrugation & film-line downtime by 18% during shift expansion."
+        },
+        {
+          "id": "prod-retailgrid",
+          "name": "RetailGrid Franchise Operations Suite",
+          "summary": "Territory onboarding, POS telemetry, and inventory replenishment for franchise chains.",
+          "valueProp": "Launches new city franchise outlets in 21 days with unified compliance checklists."
+        }
+      ],
+      "icps": [
+        {
+          "id": "icp-mh-pack",
+          "name": "Maharashtra Packaging Manufacturers",
+          "industry": "Packaging Manufacturing",
+          "geography": "Maharashtra, India",
+          "minEmployees": 50,
+          "maxEmployees": 500,
+          "buyerRoles": [
+            "Head of Operations",
+            "VP Operations",
+            "Plant Operations Director"
+          ],
+          "signalKeywords": [
+            "production hiring",
+            "plant expansion",
+            "corrugated line"
+          ]
+        },
+        {
+          "id": "icp-retail-franchise",
+          "name": "Opted-in Retail Franchise Inquiries",
+          "industry": "Retail Franchise",
+          "geography": "Pune, Mumbai, Bengaluru, Delhi NCR",
+          "minEmployees": 5,
+          "maxEmployees": 250,
+          "buyerRoles": [
+            "Franchise Partner",
+            "Managing Director",
+            "Business Owner"
+          ],
+          "signalKeywords": [
+            "franchise inquiry",
+            "store launch"
+          ]
+        }
+      ],
+      "customFields": [
+        {
+          "id": "cf-plant-count",
+          "key": "plant_count",
+          "label": "Active Plants",
+          "type": "number"
+        },
+        {
+          "id": "cf-packaging-type",
+          "key": "packaging_segment",
+          "label": "Packaging Segment",
+          "type": "select",
+          "options": [
+            "Flexible",
+            "Corrugated",
+            "Rigid",
+            "Pharma",
+            "Labels"
+          ]
+        },
+        {
+          "id": "cf-investment-band",
+          "key": "investment_band",
+          "label": "Franchise Capex Band",
+          "type": "text"
+        }
+      ],
+      "territories": [
+        {
+          "id": "terr-pune",
+          "name": "Pune West & Chakan Belt",
+          "citiesOrRegions": [
+            "Pune",
+            "Pimpri",
+            "Chakan",
+            "Talegaon"
+          ],
+          "ownerName": "Rohan Kulkarni",
+          "ownerEmail": "rohan.k@signalstack-demo.example"
+        },
+        {
+          "id": "terr-mumbai",
+          "name": "Mumbai & Konkan",
+          "citiesOrRegions": [
+            "Mumbai",
+            "Thane",
+            "Navi Mumbai",
+            "Maharashtra"
+          ],
+          "ownerName": "Meera Deshpande",
+          "ownerEmail": "meera.d@signalstack-demo.example"
+        },
+        {
+          "id": "terr-bengaluru",
+          "name": "South — Bengaluru",
+          "citiesOrRegions": [
+            "Bengaluru",
+            "Bangalore",
+            "Karnataka"
+          ],
+          "ownerName": "Karthik Nair",
+          "ownerEmail": "karthik.n@signalstack-demo.example"
+        },
+        {
+          "id": "terr-delhi",
+          "name": "North — Delhi NCR",
+          "citiesOrRegions": [
+            "Delhi",
+            "Gurugram",
+            "Noida",
+            "Delhi NCR"
+          ],
+          "ownerName": "Anjali Verma",
+          "ownerEmail": "anjali.v@signalstack-demo.example"
+        }
+      ],
+      "leadStages": [
+        "New",
+        "Qualified",
+        "Contacted",
+        "Replied",
+        "Meeting Booked",
+        "Opportunity",
+        "Customer"
+      ],
+      "scoringRules": {
+        "companyFitMax": 40,
+        "roleFitMax": 25,
+        "buyingSignalsMax": 25,
+        "engagementMax": 10,
+        "qualifiedThreshold": 70,
+        "reviewThreshold": 45
+      },
+      "suppressions": [
+        {
+          "id": "sup-1",
+          "pattern": "@konkanboxworks.example",
+          "reason": "customer",
+          "createdAt": "2026-09-12"
+        },
+        {
+          "id": "sup-2",
+          "pattern": "optout@bounced-pack.example",
+          "reason": "opt_out",
+          "createdAt": "2026-10-03"
+        }
+      ],
+      "createdAt": "2026-09-01T09:00:00Z"
+    },
+    {
+      "id": "ws-live-org",
+      "name": "Live Workspace (Empty Org)",
+      "mode": "live",
+      "currency": "USD",
+      "timeZone": "UTC",
+      "creditBudget": 1000,
+      "creditsUsed": 0,
+      "retentionDays": 180,
+      "aiProvider": "gemini",
+      "aiModel": "gemini-4-hydrogen",
+      "products": [
+        {
+          "id": "prod-default",
+          "name": "Core B2B Platform",
+          "summary": "Configure your product positioning in Workspace Settings.",
+          "valueProp": "Tailor outreach drafts and qualification scoring to your product."
+        }
+      ],
+      "icps": [],
+      "customFields": [],
+      "territories": [
+        {
+          "id": "terr-global",
+          "name": "Global Default",
+          "citiesOrRegions": [
+            "Global"
+          ],
+          "ownerName": "Workspace Admin",
+          "ownerEmail": "admin@org.example"
+        }
+      ],
+      "leadStages": [
+        "New",
+        "Qualified",
+        "Contacted",
+        "Replied",
+        "Meeting Booked",
+        "Opportunity"
+      ],
+      "scoringRules": {
+        "companyFitMax": 40,
+        "roleFitMax": 25,
+        "buyingSignalsMax": 25,
+        "engagementMax": 10,
+        "qualifiedThreshold": 70,
+        "reviewThreshold": 45
+      },
+      "suppressions": [],
+      "createdAt": "2026-11-18T00:00:00Z"
+    }
+  ],
+  "integrations": [
+    {
+      "id": "ws-demo-signalstack-apollo",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "apollo",
+      "name": "Apollo",
+      "area": "Core",
+      "isCore": true,
+      "status": "connected",
+      "owner": "aakash@signalstack-demo.example",
+      "description": "Search companies and people using campaign filters; enrich selected contacts on demand.",
+      "allowedActions": [
+        "company_search",
+        "people_search",
+        "people_enrichment"
+      ],
+      "lastSuccessfulRun": "2026-11-18T14:20:00Z",
+      "creditsRemaining": 1840,
+      "creditLimit": 2500,
+      "mailboxes": [],
+      "docsUrl": "https://docs.apollo.io/reference/organization-search"
+    },
+    {
+      "id": "ws-demo-signalstack-hunter",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "hunter",
+      "name": "Hunter",
+      "area": "Core",
+      "isCore": true,
+      "status": "connected",
+      "owner": "aakash@signalstack-demo.example",
+      "description": "Verify work emails and store verdict (valid, invalid, accept-all, unknown) with check date.",
+      "allowedActions": [
+        "email_verify"
+      ],
+      "lastSuccessfulRun": "2026-11-18T14:20:00Z",
+      "creditsRemaining": 920,
+      "creditLimit": 1000,
+      "mailboxes": [],
+      "docsUrl": "https://hunter.io/api-documentation/v2#email-verifier"
+    },
+    {
+      "id": "ws-demo-signalstack-hubspot",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "hubspot",
+      "name": "HubSpot",
+      "area": "Core",
+      "isCore": true,
+      "status": "connected",
+      "owner": "revops@signalstack-demo.example",
+      "description": "Read customer exclusions, match companies/contacts, sync qualified leads & tasks, and read outcomes.",
+      "allowedActions": [
+        "read_exclusions",
+        "match_records",
+        "upsert_companies",
+        "upsert_contacts",
+        "create_tasks",
+        "read_outcomes"
+      ],
+      "lastSuccessfulRun": "2026-11-18T14:20:00Z",
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": [],
+      "docsUrl": "https://developers.hubspot.com/docs/api/crm/contacts"
+    },
+    {
+      "id": "ws-demo-signalstack-gmail",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "gmail",
+      "name": "Gmail",
+      "area": "Core",
+      "isCore": true,
+      "status": "connected",
+      "owner": "aakash@signalstack-demo.example",
+      "description": "Connect Google mailboxes via OAuth for editable drafts, export attachments, and approved sends.",
+      "allowedActions": [
+        "create_draft",
+        "attach_export",
+        "send_message",
+        "read_reply_signals"
+      ],
+      "lastSuccessfulRun": "2026-11-18T14:20:00Z",
+      "creditsRemaining": 485,
+      "creditLimit": 500,
+      "mailboxes": [
+        {
+          "id": "mb-gmail-1",
+          "email": "aakash.gtm@signalstack-demo.example",
+          "label": "Aakash (Gmail Primary)",
+          "provider": "gmail",
+          "dailyLimit": 250,
+          "sentToday": 12
+        },
+        {
+          "id": "mb-gmail-2",
+          "email": "revops-team@signalstack-demo.example",
+          "label": "RevOps Team (Gmail)",
+          "provider": "gmail",
+          "dailyLimit": 250,
+          "sentToday": 3
+        }
+      ],
+      "docsUrl": "https://developers.google.com/gmail/api/guides/sending"
+    },
+    {
+      "id": "ws-demo-signalstack-outlook",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "outlook",
+      "name": "Microsoft 365 Outlook",
+      "area": "Core",
+      "isCore": true,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Connect Microsoft mailboxes via Microsoft Graph for drafts, export attachments, and approved sends.",
+      "allowedActions": [
+        "create_draft",
+        "attach_export",
+        "send_message",
+        "read_reply_signals"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": [],
+      "docsUrl": "https://learn.microsoft.com/en-us/graph/api/user-sendmail"
+    },
+    {
+      "id": "ws-demo-signalstack-google-sheets",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "google_sheets",
+      "name": "Google Sheets",
+      "area": "Core",
+      "isCore": true,
+      "status": "connected",
+      "owner": "aakash@signalstack-demo.example",
+      "description": "Create or update an authorized spreadsheet preserving row order, columns, and sharing permissions.",
+      "allowedActions": [
+        "create_sheet",
+        "update_sheet"
+      ],
+      "lastSuccessfulRun": "2026-11-18T14:20:00Z",
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": [],
+      "docsUrl": "https://developers.google.com/sheets/api/reference/rest"
+    },
+    {
+      "id": "ws-demo-signalstack-clay",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "clay",
+      "name": "Clay",
+      "area": "Prospect data & enrichment",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Waterfall enrichment workflows and table webhooks.",
+      "allowedActions": [
+        "enrich_waterfall",
+        "trigger_table_webhook"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": []
+    },
+    {
+      "id": "ws-demo-signalstack-pdl-zoominfo",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "pdl_zoominfo",
+      "name": "People Data Labs / ZoomInfo",
+      "area": "Prospect data & enrichment",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Licensed firmographic and contact enrichment records.",
+      "allowedActions": [
+        "company_enrich",
+        "contact_enrich"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": [],
+      "missingApprovalNote": "Requires enterprise license key in workspace secrets."
+    },
+    {
+      "id": "ws-demo-signalstack-crunchbase",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "crunchbase",
+      "name": "Crunchbase",
+      "area": "Prospect data & enrichment",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Verified funding rounds, investor announcements, and acquisition signals.",
+      "allowedActions": [
+        "funding_events"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": []
+    },
+    {
+      "id": "ws-demo-signalstack-builtwith",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "builtwith",
+      "name": "BuiltWith",
+      "area": "Prospect data & enrichment",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Technographic stack detection and platform migration signals.",
+      "allowedActions": [
+        "tech_signals"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": []
+    },
+    {
+      "id": "ws-demo-signalstack-linkedin",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "linkedin",
+      "name": "LinkedIn Lead Gen Forms & Partner API",
+      "area": "Social & inbound",
+      "isCore": false,
+      "status": "approval_required",
+      "owner": "Not connected",
+      "description": "Retrieve submitted Lead Gen Forms and approved Sales Navigator partner workflows.",
+      "allowedActions": [
+        "read_lead_gen_forms",
+        "manual_message_draft"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": [],
+      "missingApprovalNote": "Automated LinkedIn messaging requires Sales Navigator Partner approval; manual draft mode available.",
+      "docsUrl": "https://learn.microsoft.com/en-us/linkedin/marketing/lead-sync/leadsync"
+    },
+    {
+      "id": "ws-demo-signalstack-meta",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "meta_lead_ads",
+      "name": "Meta Lead Ads",
+      "area": "Social & inbound",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Ingest opted-in leads from organization Facebook and Instagram forms.",
+      "allowedActions": [
+        "read_lead_ads"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": [],
+      "docsUrl": "https://developers.facebook.com/docs/marketing-api/guides/lead-ads/"
+    },
+    {
+      "id": "ws-demo-signalstack-x-youtube",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "x_youtube",
+      "name": "X & YouTube APIs",
+      "area": "Social & inbound",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Sourced company announcements where API tier access permits.",
+      "allowedActions": [
+        "read_company_posts"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": []
+    },
+    {
+      "id": "ws-demo-signalstack-whatsapp",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "whatsapp_business",
+      "name": "WhatsApp Business",
+      "area": "Social & inbound",
+      "isCore": false,
+      "status": "approval_required",
+      "owner": "Not connected",
+      "description": "Eligible opted-in customer conversations with approved Meta templates.",
+      "allowedActions": [
+        "send_approved_template"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": [],
+      "missingApprovalNote": "Requires approved WhatsApp Business template and opt-in consent record."
+    },
+    {
+      "id": "ws-demo-signalstack-first-party",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "first_party_forms",
+      "name": "Website Forms, Typeform & Events",
+      "area": "First-party marketing",
+      "isCore": false,
+      "status": "connected",
+      "owner": "marketing@signalstack-demo.example",
+      "description": "Capture opted-in website inquiries, Typeform responses, and event registrations.",
+      "allowedActions": [
+        "ingest_form_submissions",
+        "ingest_event_lists"
+      ],
+      "lastSuccessfulRun": "2026-11-18T14:20:00Z",
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": []
+    },
+    {
+      "id": "ws-demo-signalstack-segment-ga4",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "segment_mailchimp_ga4",
+      "name": "Segment, Mailchimp & GA4",
+      "area": "First-party marketing",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Permitted first-party events, opted-in nurture lists, and aggregate campaign analytics.",
+      "allowedActions": [
+        "read_first_party_events",
+        "sync_nurture_audience",
+        "read_aggregate_reporting"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": []
+    },
+    {
+      "id": "ws-demo-signalstack-salesforce-crm",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "salesforce_dynamics_pipedrive",
+      "name": "Salesforce, Dynamics 365 & Pipedrive",
+      "area": "CRM & sales handoff",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Enterprise CRM record matching, territory handoff, and opportunity attribution.",
+      "allowedActions": [
+        "read_exclusions",
+        "upsert_crm_records"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": []
+    },
+    {
+      "id": "ws-demo-signalstack-slack-teams",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "slack_teams",
+      "name": "Slack & Microsoft Teams",
+      "area": "CRM & sales handoff",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Notify assigned sellers when high-score leads or inbound inquiries arrive.",
+      "allowedActions": [
+        "notify_seller"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": []
+    },
+    {
+      "id": "ws-demo-signalstack-engagement-auto",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "outreach_n8n_make_zapier",
+      "name": "Outreach, Salesloft, n8n, Make & Zapier",
+      "area": "Engagement & automation",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Approved outbound sequences and authenticated webhooks for custom automation flows.",
+      "allowedActions": [
+        "enroll_sequence",
+        "trigger_signed_webhook"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": []
+    },
+    {
+      "id": "ws-demo-signalstack-warehouse",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "warehouses_fabric",
+      "name": "PostgreSQL, BigQuery, Snowflake & Fabric",
+      "area": "Databases & analytics",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Read mapped permitted tables or export snapshots to OneLake / Power BI.",
+      "allowedActions": [
+        "read_mapped_views",
+        "export_analytics_snapshot"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": []
+    },
+    {
+      "id": "ws-live-org-apollo",
+      "workspaceId": "ws-live-org",
+      "providerId": "apollo",
+      "name": "Apollo",
+      "area": "Core",
+      "isCore": true,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Search companies and people using campaign filters; enrich selected contacts on demand.",
+      "allowedActions": [
+        "company_search",
+        "people_search",
+        "people_enrichment"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": [],
+      "docsUrl": "https://docs.apollo.io/reference/organization-search"
+    },
+    {
+      "id": "ws-live-org-hunter",
+      "workspaceId": "ws-live-org",
+      "providerId": "hunter",
+      "name": "Hunter",
+      "area": "Core",
+      "isCore": true,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Verify work emails and store verdict (valid, invalid, accept-all, unknown) with check date.",
+      "allowedActions": [
+        "email_verify"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": [],
+      "docsUrl": "https://hunter.io/api-documentation/v2#email-verifier"
+    },
+    {
+      "id": "ws-live-org-hubspot",
+      "workspaceId": "ws-live-org",
+      "providerId": "hubspot",
+      "name": "HubSpot",
+      "area": "Core",
+      "isCore": true,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Read customer exclusions, match companies/contacts, sync qualified leads & tasks, and read outcomes.",
+      "allowedActions": [
+        "read_exclusions",
+        "match_records",
+        "upsert_companies",
+        "upsert_contacts",
+        "create_tasks",
+        "read_outcomes"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": [],
+      "docsUrl": "https://developers.hubspot.com/docs/api/crm/contacts"
+    },
+    {
+      "id": "ws-live-org-gmail",
+      "workspaceId": "ws-live-org",
+      "providerId": "gmail",
+      "name": "Gmail",
+      "area": "Core",
+      "isCore": true,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Connect Google mailboxes via OAuth for editable drafts, export attachments, and approved sends.",
+      "allowedActions": [
+        "create_draft",
+        "attach_export",
+        "send_message",
+        "read_reply_signals"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": [],
+      "docsUrl": "https://developers.google.com/gmail/api/guides/sending"
+    },
+    {
+      "id": "ws-live-org-outlook",
+      "workspaceId": "ws-live-org",
+      "providerId": "outlook",
+      "name": "Microsoft 365 Outlook",
+      "area": "Core",
+      "isCore": true,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Connect Microsoft mailboxes via Microsoft Graph for drafts, export attachments, and approved sends.",
+      "allowedActions": [
+        "create_draft",
+        "attach_export",
+        "send_message",
+        "read_reply_signals"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": [],
+      "docsUrl": "https://learn.microsoft.com/en-us/graph/api/user-sendmail"
+    },
+    {
+      "id": "ws-live-org-google-sheets",
+      "workspaceId": "ws-live-org",
+      "providerId": "google_sheets",
+      "name": "Google Sheets",
+      "area": "Core",
+      "isCore": true,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Create or update an authorized spreadsheet preserving row order, columns, and sharing permissions.",
+      "allowedActions": [
+        "create_sheet",
+        "update_sheet"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": [],
+      "docsUrl": "https://developers.google.com/sheets/api/reference/rest"
+    },
+    {
+      "id": "ws-live-org-clay",
+      "workspaceId": "ws-live-org",
+      "providerId": "clay",
+      "name": "Clay",
+      "area": "Prospect data & enrichment",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Waterfall enrichment workflows and table webhooks.",
+      "allowedActions": [
+        "enrich_waterfall",
+        "trigger_table_webhook"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": []
+    },
+    {
+      "id": "ws-live-org-pdl-zoominfo",
+      "workspaceId": "ws-live-org",
+      "providerId": "pdl_zoominfo",
+      "name": "People Data Labs / ZoomInfo",
+      "area": "Prospect data & enrichment",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Licensed firmographic and contact enrichment records.",
+      "allowedActions": [
+        "company_enrich",
+        "contact_enrich"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": [],
+      "missingApprovalNote": "Requires enterprise license key in workspace secrets."
+    },
+    {
+      "id": "ws-live-org-crunchbase",
+      "workspaceId": "ws-live-org",
+      "providerId": "crunchbase",
+      "name": "Crunchbase",
+      "area": "Prospect data & enrichment",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Verified funding rounds, investor announcements, and acquisition signals.",
+      "allowedActions": [
+        "funding_events"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": []
+    },
+    {
+      "id": "ws-live-org-builtwith",
+      "workspaceId": "ws-live-org",
+      "providerId": "builtwith",
+      "name": "BuiltWith",
+      "area": "Prospect data & enrichment",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Technographic stack detection and platform migration signals.",
+      "allowedActions": [
+        "tech_signals"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": []
+    },
+    {
+      "id": "ws-live-org-linkedin",
+      "workspaceId": "ws-live-org",
+      "providerId": "linkedin",
+      "name": "LinkedIn Lead Gen Forms & Partner API",
+      "area": "Social & inbound",
+      "isCore": false,
+      "status": "approval_required",
+      "owner": "Not connected",
+      "description": "Retrieve submitted Lead Gen Forms and approved Sales Navigator partner workflows.",
+      "allowedActions": [
+        "read_lead_gen_forms",
+        "manual_message_draft"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": [],
+      "missingApprovalNote": "Automated LinkedIn messaging requires Sales Navigator Partner approval; manual draft mode available.",
+      "docsUrl": "https://learn.microsoft.com/en-us/linkedin/marketing/lead-sync/leadsync"
+    },
+    {
+      "id": "ws-live-org-meta",
+      "workspaceId": "ws-live-org",
+      "providerId": "meta_lead_ads",
+      "name": "Meta Lead Ads",
+      "area": "Social & inbound",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Ingest opted-in leads from organization Facebook and Instagram forms.",
+      "allowedActions": [
+        "read_lead_ads"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": [],
+      "docsUrl": "https://developers.facebook.com/docs/marketing-api/guides/lead-ads/"
+    },
+    {
+      "id": "ws-live-org-x-youtube",
+      "workspaceId": "ws-live-org",
+      "providerId": "x_youtube",
+      "name": "X & YouTube APIs",
+      "area": "Social & inbound",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Sourced company announcements where API tier access permits.",
+      "allowedActions": [
+        "read_company_posts"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": []
+    },
+    {
+      "id": "ws-live-org-whatsapp",
+      "workspaceId": "ws-live-org",
+      "providerId": "whatsapp_business",
+      "name": "WhatsApp Business",
+      "area": "Social & inbound",
+      "isCore": false,
+      "status": "approval_required",
+      "owner": "Not connected",
+      "description": "Eligible opted-in customer conversations with approved Meta templates.",
+      "allowedActions": [
+        "send_approved_template"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": [],
+      "missingApprovalNote": "Requires approved WhatsApp Business template and opt-in consent record."
+    },
+    {
+      "id": "ws-live-org-first-party",
+      "workspaceId": "ws-live-org",
+      "providerId": "first_party_forms",
+      "name": "Website Forms, Typeform & Events",
+      "area": "First-party marketing",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Capture opted-in website inquiries, Typeform responses, and event registrations.",
+      "allowedActions": [
+        "ingest_form_submissions",
+        "ingest_event_lists"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": []
+    },
+    {
+      "id": "ws-live-org-segment-ga4",
+      "workspaceId": "ws-live-org",
+      "providerId": "segment_mailchimp_ga4",
+      "name": "Segment, Mailchimp & GA4",
+      "area": "First-party marketing",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Permitted first-party events, opted-in nurture lists, and aggregate campaign analytics.",
+      "allowedActions": [
+        "read_first_party_events",
+        "sync_nurture_audience",
+        "read_aggregate_reporting"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": []
+    },
+    {
+      "id": "ws-live-org-salesforce-crm",
+      "workspaceId": "ws-live-org",
+      "providerId": "salesforce_dynamics_pipedrive",
+      "name": "Salesforce, Dynamics 365 & Pipedrive",
+      "area": "CRM & sales handoff",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Enterprise CRM record matching, territory handoff, and opportunity attribution.",
+      "allowedActions": [
+        "read_exclusions",
+        "upsert_crm_records"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": []
+    },
+    {
+      "id": "ws-live-org-slack-teams",
+      "workspaceId": "ws-live-org",
+      "providerId": "slack_teams",
+      "name": "Slack & Microsoft Teams",
+      "area": "CRM & sales handoff",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Notify assigned sellers when high-score leads or inbound inquiries arrive.",
+      "allowedActions": [
+        "notify_seller"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": []
+    },
+    {
+      "id": "ws-live-org-engagement-auto",
+      "workspaceId": "ws-live-org",
+      "providerId": "outreach_n8n_make_zapier",
+      "name": "Outreach, Salesloft, n8n, Make & Zapier",
+      "area": "Engagement & automation",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Approved outbound sequences and authenticated webhooks for custom automation flows.",
+      "allowedActions": [
+        "enroll_sequence",
+        "trigger_signed_webhook"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": []
+    },
+    {
+      "id": "ws-live-org-warehouse",
+      "workspaceId": "ws-live-org",
+      "providerId": "warehouses_fabric",
+      "name": "PostgreSQL, BigQuery, Snowflake & Fabric",
+      "area": "Databases & analytics",
+      "isCore": false,
+      "status": "disconnected",
+      "owner": "Not connected",
+      "description": "Read mapped permitted tables or export snapshots to OneLake / Power BI.",
+      "allowedActions": [
+        "read_mapped_views",
+        "export_analytics_snapshot"
+      ],
+      "lastSuccessfulRun": null,
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": []
+    },
+    {
+      "id": "ws-demo-signalstack-api-1795412763830",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "api_instantly",
+      "name": "Instantly",
+      "protocol": "api",
+      "area": "Custom REST / Webhook",
+      "isCore": false,
+      "status": "connected",
+      "owner": "Workspace Admin",
+      "description": "Cold email scaling, unlimited sender warmup & unified unibox.",
+      "allowedActions": [
+        "POST /lead/add",
+        "GET /campaign/summary",
+        "GET /unibox/replies"
+      ],
+      "lastSuccessfulRun": "2026-11-23T05:46:03.830Z",
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": [],
+      "customConfig": {
+        "baseUrl": "https://api.instantly.ai/api/v2",
+        "authType": "bearer",
+        "envVarName": "INSTANTLY_API_KEY",
+        "operations": [
+          "POST /lead/add",
+          "GET /campaign/summary",
+          "GET /unibox/replies"
+        ],
+        "fieldMappings": {
+          "workEmail": "email",
+          "companyName": "account_name"
+        }
+      }
+    },
+    {
+      "id": "ws-demo-signalstack-mcp-1795412763939",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "mcp_attio",
+      "name": "Attio",
+      "protocol": "mcp",
+      "area": "MCP Servers",
+      "isCore": false,
+      "status": "connected",
+      "owner": "Workspace Admin",
+      "description": "Modern, flexible, data-driven CRM with custom objects & live enrichment.",
+      "allowedActions": [
+        "attio_search_records",
+        "attio_upsert_company",
+        "attio_add_to_list"
+      ],
+      "lastSuccessfulRun": "2026-11-23T05:46:03.939Z",
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": [],
+      "mcpConfig": {
+        "transport": "streamable_http",
+        "endpointUrl": "https://mcp.attio.example/v1/mcp",
+        "authMode": "bearer_env",
+        "envVarName": "ATTIO_API_KEY",
+        "protocolVersion": "2025-03-26",
+        "discoveredTools": [
+          {
+            "name": "attio_search_records",
+            "description": "Attio MCP action (attio_search_records)."
+          },
+          {
+            "name": "attio_upsert_company",
+            "description": "Attio MCP action (attio_upsert_company)."
+          },
+          {
+            "name": "attio_add_to_list",
+            "description": "Attio MCP action (attio_add_to_list)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ws-demo-signalstack-mcp-1795412763969",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "mcp_claude_claude_code",
+      "name": "Claude / Claude Code",
+      "protocol": "mcp",
+      "area": "MCP Servers",
+      "isCore": false,
+      "status": "connected",
+      "owner": "Workspace Admin",
+      "description": "AI copywriting, data cleaning & agentic GTM workflows via MCP.",
+      "allowedActions": [
+        "search_gtm_leads",
+        "list_workspace_campaigns",
+        "get_connected_tools"
+      ],
+      "lastSuccessfulRun": "2026-11-23T05:46:03.969Z",
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": [],
+      "mcpConfig": {
+        "transport": "streamable_http",
+        "endpointUrl": "http://localhost:3000/api/mcp",
+        "authMode": "bearer_env",
+        "envVarName": "ANTHROPIC_API_KEY",
+        "protocolVersion": "2025-03-26",
+        "discoveredTools": [
+          {
+            "name": "search_gtm_leads",
+            "description": "Search ranked GTM leads in a workspace filtered by city, industry, or verified email status.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "workspaceId": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "verifiedOnly": {
+                  "type": "boolean"
+                },
+                "limit": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          {
+            "name": "list_workspace_campaigns",
+            "description": "Return active outbound and inbound GTM campaigns with filter summaries and matched lead counts.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "workspaceId": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "get_connected_tools",
+            "description": "List all connected plugins, MCP servers, and REST/Webhook APIs authorized for a workspace.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "workspaceId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ws-demo-signalstack-api-1795412764146",
+      "workspaceId": "ws-demo-signalstack",
+      "providerId": "api_rb2b",
+      "name": "RB2B",
+      "protocol": "api",
+      "area": "Custom REST / Webhook",
+      "isCore": false,
+      "status": "connected",
+      "owner": "Workspace Admin",
+      "description": "Person-level website visitor identification routed into Slack & CRM.",
+      "allowedActions": [
+        "POST /webhooks/website-visitor",
+        "GET /visitors/high-intent"
+      ],
+      "lastSuccessfulRun": "2026-11-23T05:46:04.146Z",
+      "creditsRemaining": null,
+      "creditLimit": null,
+      "mailboxes": [],
+      "customConfig": {
+        "baseUrl": "https://api.rb2b.com/v1/webhooks",
+        "authType": "bearer",
+        "envVarName": "RB2B_WEBHOOK_SECRET",
+        "operations": [
+          "POST /webhooks/website-visitor",
+          "GET /visitors/high-intent"
+        ],
+        "fieldMappings": {
+          "workEmail": "email",
+          "companyName": "account_name"
+        }
+      }
+    }
+  ],
+  "campaigns": [
+    {
+      "id": "cmp-mh-packaging",
+      "workspaceId": "ws-demo-signalstack",
+      "name": "Maharashtra Packaging Ops Outbound",
+      "mode": "outbound",
+      "productId": "prod-linepulse",
+      "goal": "Book plant automation demos with Heads of Operations at Maharashtra packaging manufacturers",
+      "status": "Active",
+      "filters": {
+        "product": "LinePulse IIoT Plant Automation",
+        "campaignGoal": "Book plant efficiency & line-uptime demos with operations leaders",
+        "icpName": "Packaging Manufacturers (Maharashtra)",
+        "industry": "Packaging Manufacturing",
+        "companyHqLocation": "Maharashtra",
+        "contactLocation": "",
+        "minEmployees": 50,
+        "maxEmployees": 500,
+        "buyerRoles": [
+          "Head of Operations",
+          "VP Operations",
+          "Plant Operations Director"
+        ],
+        "exclusions": [
+          "Existing HubSpot customers"
+        ],
+        "buyingSignalKeywords": [
+          "production",
+          "hiring"
+        ],
+        "signalWindowDays": 90,
+        "targetCount": 25,
+        "requestedOutput": null,
+        "verifiedEmailOnly": false,
+        "excludeHubSpotCustomers": true,
+        "cityFilter": null
+      },
+      "leadIds": [],
+      "refreshSchedule": "Weekly",
+      "createdAt": "2026-11-12",
+      "updatedAt": "2026-11-18"
+    },
+    {
+      "id": "cmp-inbound-franchise",
+      "workspaceId": "ws-demo-signalstack",
+      "name": "Inbound Retail Franchise Inquiries",
+      "mode": "inbound",
+      "productId": "prod-retailgrid",
+      "goal": "Deduplicate opted-in retail franchise leads, route by city, sync to HubSpot, and export city summary",
+      "status": "Active",
+      "filters": {
+        "product": "RetailGrid Franchise Operations Suite",
+        "campaignGoal": "Qualify and assign opted-in retail franchise inquiries by city",
+        "icpName": "Opted-in Retail Franchise Inquiries",
+        "industry": "Retail Franchise",
+        "companyHqLocation": "India",
+        "contactLocation": "",
+        "minEmployees": null,
+        "maxEmployees": null,
+        "buyerRoles": [
+          "Franchise Partner",
+          "Managing Director",
+          "Business Owner"
+        ],
+        "exclusions": [],
+        "buyingSignalKeywords": [
+          "franchise",
+          "store"
+        ],
+        "signalWindowDays": 90,
+        "targetCount": 50,
+        "requestedOutput": null,
+        "verifiedEmailOnly": false,
+        "excludeHubSpotCustomers": false,
+        "cityFilter": null
+      },
+      "leadIds": [],
+      "refreshSchedule": "Daily",
+      "createdAt": "2026-11-10",
+      "updatedAt": "2026-11-18"
+    },
+    {
+      "id": "ws-live-org-cmp-default",
+      "workspaceId": "ws-live-org",
+      "name": "Untitled Outbound Campaign",
+      "mode": "outbound",
+      "productId": "prod-default",
+      "goal": "Define your ICP in chat or upload an opted-in spreadsheet",
+      "status": "Active",
+      "filters": {
+        "product": "LinePulse IIoT Plant Automation",
+        "campaignGoal": "Book plant efficiency & line-uptime demos with operations leaders",
+        "icpName": "Packaging Manufacturers (Maharashtra)",
+        "industry": "",
+        "companyHqLocation": "",
+        "contactLocation": "",
+        "minEmployees": 50,
+        "maxEmployees": 500,
+        "buyerRoles": [],
+        "exclusions": [],
+        "buyingSignalKeywords": [],
+        "signalWindowDays": 90,
+        "targetCount": 25,
+        "requestedOutput": null,
+        "verifiedEmailOnly": false,
+        "excludeHubSpotCustomers": false,
+        "cityFilter": null
+      },
+      "leadIds": [],
+      "refreshSchedule": "Manual",
+      "createdAt": "2026-11-18",
+      "updatedAt": "2026-11-18"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread-ws-demo-signalstack-1",
+      "workspaceId": "ws-demo-signalstack",
+      "campaignId": "cmp-mh-packaging",
+      "title": "New Lead Search",
+      "messages": [],
+      "selectedLeadIds": [],
+      "activeLeadId": null,
+      "createdAt": "2026-11-23T05:45:57.323Z",
+      "updatedAt": "2026-11-23T05:45:57.323Z"
+    },
+    {
+      "id": "thread-ws-live-org-1",
+      "workspaceId": "ws-live-org",
+      "campaignId": "ws-live-org-cmp-default",
+      "title": "New Lead Search",
+      "messages": [],
+      "selectedLeadIds": [],
+      "activeLeadId": null,
+      "createdAt": "2026-11-23T05:45:57.323Z",
+      "updatedAt": "2026-11-23T05:45:57.323Z"
+    }
+  ],
+  "leads": [],
+  "runs": [],
+  "exports": [],
+  "exportFiles": {},
+  "drafts": [],
+  "sequences": [
+    {
+      "id": "seq-pack-ops",
+      "workspaceId": "ws-demo-signalstack",
+      "campaignId": "cmp-mh-packaging",
+      "name": "Packaging Production Hiring — 3-Step Email",
+      "channel": "email",
+      "replyStopSupported": true,
+      "status": "draft",
+      "steps": [
+        {
+          "id": "st-1",
+          "dayOffset": 0,
+          "channel": "email",
+          "subject": "Uptime visibility for {{company}} production ramp",
+          "bodyTemplate": "Hi {{first_name}},\n\n{{opener}}\n\nWould a 15-minute walkthrough of LinePulse for your {{city}} plant be useful next week?"
+        },
+        {
+          "id": "st-2",
+          "dayOffset": 4,
+          "channel": "email",
+          "subject": "Re: {{company}} shift changeover benchmarks",
+          "bodyTemplate": "Hi {{first_name}},\n\nSharing a 2-page benchmark from mid-market packaging plants in Maharashtra that cut unplanned downtime by 18% during new shift onboarding."
+        }
+      ],
+      "enrolledLeadIds": [],
+      "stoppedLeadIds": [],
+      "createdAt": "2026-11-15"
+    },
+    {
+      "id": "seq-linkedin-manual",
+      "workspaceId": "ws-demo-signalstack",
+      "campaignId": "cmp-mh-packaging",
+      "name": "LinkedIn Executive Note (Manual Reply Stop)",
+      "channel": "linkedin",
+      "replyStopSupported": false,
+      "status": "paused_no_reply_signal",
+      "steps": [
+        {
+          "id": "st-li-1",
+          "dayOffset": 0,
+          "channel": "linkedin",
+          "subject": "Connection Note",
+          "bodyTemplate": "Hi {{first_name}} — saw {{company}} expanding production in {{city}}. Happy to connect and share packaging OEE benchmarks."
+        }
+      ],
+      "enrolledLeadIds": [],
+      "stoppedLeadIds": [],
+      "createdAt": "2026-11-16"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-seed-1",
+      "workspaceId": "ws-demo-signalstack",
+      "campaignId": "cmp-mh-packaging",
+      "leadId": "lead-mh-01",
+      "title": "Review Chakan plant expansion brief & send LinePulse demo invite to Ananya Deshmukh",
+      "owner": "Rohan Kulkarni",
+      "dueDate": "2026-11-21",
+      "status": "Open",
+      "crmTaskId": null,
+      "createdAt": "2026-11-18"
+    },
+    {
+      "id": "task-seed-2",
+      "workspaceId": "ws-demo-signalstack",
+      "campaignId": "cmp-inbound-franchise",
+      "leadId": null,
+      "title": "Verify Pune & Bengaluru franchise territory capacity before Q1 allocation",
+      "owner": "Karthik Nair",
+      "dueDate": "2026-11-22",
+      "status": "In Progress",
+      "crmTaskId": null,
+      "createdAt": "2026-11-17"
+    }
+  ],
+  "savedSearches": [
+    {
+      "id": "ss-mh-pack",
+      "workspaceId": "ws-demo-signalstack",
+      "campaignId": "cmp-mh-packaging",
+      "name": "Maharashtra Packaging Heads of Ops (90d Hiring)",
+      "prompt": "Find up to 25 heads of operations at packaging manufacturers headquartered in Maharashtra with 50–500 employees. Prioritize companies that posted a production hiring notice in the last 90 days. Exclude our existing HubSpot customers.",
+      "filters": {
+        "product": "LinePulse IIoT Plant Automation",
+        "campaignGoal": "Book plant efficiency & line-uptime demos with operations leaders",
+        "icpName": "Packaging Manufacturers (Maharashtra)",
+        "industry": "Packaging Manufacturing",
+        "companyHqLocation": "Maharashtra",
+        "contactLocation": "",
+        "minEmployees": 50,
+        "maxEmployees": 500,
+        "buyerRoles": [
+          "Head of Operations",
+          "VP Operations",
+          "Plant Operations Director"
+        ],
+        "exclusions": [
+          "Existing HubSpot customers"
+        ],
+        "buyingSignalKeywords": [
+          "production",
+          "hiring"
+        ],
+        "signalWindowDays": 90,
+        "targetCount": 25,
+        "requestedOutput": null,
+        "verifiedEmailOnly": false,
+        "excludeHubSpotCustomers": true,
+        "cityFilter": null
+      },
+      "schedule": "Weekly",
+      "lastRefreshedAt": "2026-11-18T08:00:00Z",
+      "lastMatchCount": 16,
+      "newlyQualifyingCount": 3,
+      "createdAt": "2026-11-12"
+    },
+    {
+      "id": "ss-pune-verified",
+      "workspaceId": "ws-demo-signalstack",
+      "campaignId": "cmp-mh-packaging",
+      "name": "Pune HQ Packaging — Verified Work Emails",
+      "prompt": "Keep only Pune-headquartered companies with verified work emails.",
+      "filters": {
+        "product": "LinePulse IIoT Plant Automation",
+        "campaignGoal": "Book plant efficiency & line-uptime demos with operations leaders",
+        "icpName": "Packaging Manufacturers (Maharashtra)",
+        "industry": "Packaging Manufacturing",
+        "companyHqLocation": "Maharashtra",
+        "contactLocation": "",
+        "minEmployees": 50,
+        "maxEmployees": 500,
+        "buyerRoles": [
+          "Head of Operations",
+          "VP Operations",
+          "Plant Operations Director"
+        ],
+        "exclusions": [
+          "Existing HubSpot customers"
+        ],
+        "buyingSignalKeywords": [
+          "production",
+          "hiring"
+        ],
+        "signalWindowDays": 90,
+        "targetCount": 25,
+        "requestedOutput": null,
+        "verifiedEmailOnly": true,
+        "excludeHubSpotCustomers": true,
+        "cityFilter": "Pune"
+      },
+      "schedule": "Daily",
+      "lastRefreshedAt": "2026-11-18T08:05:00Z",
+      "lastMatchCount": 10,
+      "newlyQualifyingCount": 1,
+      "createdAt": "2026-11-14"
+    }
+  ],
+  "templates": [
+    {
+      "id": "tpl-mh-pack",
+      "name": "Regional Manufacturing Operations Outbound",
+      "mode": "outbound",
+      "description": "Find heads of operations at regional manufacturers with recent production hiring signals and CRM customer exclusion.",
+      "prompt": "Find up to 25 heads of operations at packaging manufacturers headquartered in Maharashtra with 50–500 employees. Prioritize companies that posted a production hiring notice in the last 90 days. Exclude our existing HubSpot customers.",
+      "defaultFilters": {
+        "product": "LinePulse IIoT Plant Automation",
+        "campaignGoal": "Book plant efficiency & line-uptime demos with operations leaders",
+        "icpName": "Packaging Manufacturers (Maharashtra)",
+        "industry": "Packaging Manufacturing",
+        "companyHqLocation": "Maharashtra",
+        "contactLocation": "",
+        "minEmployees": 50,
+        "maxEmployees": 500,
+        "buyerRoles": [
+          "Head of Operations",
+          "VP Operations",
+          "Plant Operations Director"
+        ],
+        "exclusions": [
+          "Existing HubSpot customers"
+        ],
+        "buyingSignalKeywords": [
+          "production",
+          "hiring"
+        ],
+        "signalWindowDays": 90,
+        "targetCount": 25,
+        "requestedOutput": null,
+        "verifiedEmailOnly": false,
+        "excludeHubSpotCustomers": true,
+        "cityFilter": null
+      }
+    },
+    {
+      "id": "tpl-inbound-franchise",
+      "name": "Opted-In Inbound Franchise Routing",
+      "mode": "inbound",
+      "description": "Import opted-in retail franchise inquiries, deduplicate repeated submissions, assign owners by city, sync to HubSpot, and export a city summary.",
+      "prompt": "Import opted-in retail franchise inquiries, deduplicate repeated submissions, assign owners by city, sync eligible records to HubSpot CRM, and export a city-level Excel summary.",
+      "defaultFilters": {
+        "product": "RetailGrid Franchise Operations Suite",
+        "campaignGoal": "Qualify and assign opted-in retail franchise inquiries by city",
+        "icpName": "Opted-in Retail Franchise Inquiries",
+        "industry": "Retail Franchise",
+        "companyHqLocation": "India",
+        "contactLocation": "",
+        "minEmployees": null,
+        "maxEmployees": null,
+        "buyerRoles": [
+          "Franchise Partner",
+          "Managing Director",
+          "Business Owner"
+        ],
+        "exclusions": [],
+        "buyingSignalKeywords": [
+          "franchise",
+          "store"
+        ],
+        "signalWindowDays": 90,
+        "targetCount": 50,
+        "requestedOutput": null,
+        "verifiedEmailOnly": false,
+        "excludeHubSpotCustomers": false,
+        "cityFilter": null
+      }
+    }
+  ],
+  "auditEvents": [
+    {
+      "id": "aud-1795412764146-7d6i",
+      "workspaceId": "ws-demo-signalstack",
+      "actor": "Workspace Admin",
+      "category": "integration",
+      "summary": "Registered API connector \"RB2B\" (https://api.rb2b.com/v1/webhooks).",
+      "createdAt": "2026-11-23T05:46:04.146Z"
+    },
+    {
+      "id": "aud-1795412763969-qw8v",
+      "workspaceId": "ws-demo-signalstack",
+      "actor": "Workspace Admin",
+      "category": "integration",
+      "summary": "Connected MCP server \"Claude / Claude Code\" (streamable_http, 3 tools).",
+      "createdAt": "2026-11-23T05:46:03.969Z"
+    },
+    {
+      "id": "aud-1795412763939-96al",
+      "workspaceId": "ws-demo-signalstack",
+      "actor": "Workspace Admin",
+      "category": "integration",
+      "summary": "Connected MCP server \"Attio\" (streamable_http, 3 tools).",
+      "createdAt": "2026-11-23T05:46:03.939Z"
+    },
+    {
+      "id": "aud-1795412763830-ahlr",
+      "workspaceId": "ws-demo-signalstack",
+      "actor": "Workspace Admin",
+      "category": "integration",
+      "summary": "Registered API connector \"Instantly\" (https://api.instantly.ai/api/v2).",
+      "createdAt": "2026-11-23T05:46:03.830Z"
+    },
+    {
+      "id": "aud-init-1",
+      "workspaceId": "ws-demo-signalstack",
+      "actor": "System",
+      "category": "settings",
+      "summary": "Initialized Demo Workspace with fictional Maharashtra packaging & retail franchise fixtures and local email preview.",
+      "createdAt": "2026-11-23T05:45:57.323Z"
+    },
+    {
+      "id": "aud-init-2",
+      "workspaceId": "ws-live-org",
+      "actor": "System",
+      "category": "settings",
+      "summary": "Initialized Live Workspace with 0 connected tools. Upload a spreadsheet or connect providers in Integrations.",
+      "createdAt": "2026-11-23T05:45:57.323Z"
+    }
+  ]
+}
